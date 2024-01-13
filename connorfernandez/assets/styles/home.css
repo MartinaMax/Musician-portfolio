@@ -1,0 +1,393 @@
+body {
+    overflow-x: hidden;
+}
+
+/* Header begins */
+
+header {
+    height: 100vh;
+}
+
+#myVideo {
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--darkbrown);
+}
+
+article.header-title {
+    margin-top: 16vh;
+    animation-duration: 1s;
+    animation-name: title;
+}
+
+.h-under-title {
+    font-size: 1.444rem;
+    color: var(--yellow);
+    font-weight: 600;
+}
+
+.main-title {
+    color: var(--white);
+    font-size: 5.555rem;
+    font-family: "Montserrat", "Poppins", sans-serif;
+    font-weight: 800;
+    line-height: 1em;
+    padding: 15px 0 20px 0px;
+}
+
+@keyframes title {
+    0% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+}
+}
+
+.scroll-down {
+    display: flex;
+    position: absolute;
+    bottom: 10vh;
+    animation-duration: 1s;
+    animation-name: scroll;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(100vh);
+        -webkit-transform: translateY(100vh);
+        -moz-transform: translateY(100vh);
+        -ms-transform: translateY(100vh);
+        -o-transform: translateY(100vh);
+}
+}
+
+.scroll-down > p {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.scroll-down > p::before {
+    content: "";
+    display: block;
+    background: url('../img/ic_arrow-down.svg') no-repeat;
+    width: 26px;
+    height: 26px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.scroll-down > p::after {
+    content: "";
+    display: flex;
+    background: url('../img/ic_arrow-down.svg') no-repeat;
+    float: right;
+    width: 26px;
+    height: 26px;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+.curvy-vertical-grid {
+    max-width: 1192px;
+    margin: 0 auto;
+    position: relative;
+    animation-duration: 1s;
+    animation-name: curvy;
+}
+
+@keyframes curvy {
+    0% {
+        transform: translateY(100vh);
+        -webkit-transform: translateY(100vh);
+        -moz-transform: translateY(100vh);
+        -ms-transform: translateY(100vh);
+        -o-transform: translateY(100vh);
+}
+
+}
+
+.curvy-vertical {
+    position: absolute;
+    right: 0;
+}
+
+
+
+/* Header ends */
+
+/* About-short starts */
+
+.about-short {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-text {
+    color: var(--darkbrown);
+    background-color: var(--white);
+    padding: 50px 40px;
+    transform: translateX(-15%);
+    -webkit-transform: translateX(-15%);
+    -moz-transform: translateX(-15%);
+    -ms-transform: translateX(-15%);
+    -o-transform: translateX(-15%);
+    max-width: 586px;
+}
+
+.about-text > h2 {
+    font-size: 1.666rem;
+    padding-bottom: 1.388rem;
+}
+
+.about-text > p {
+    color: var(--grey);
+    line-height: 1.8;
+    padding-bottom: 2.222rem;
+}
+
+
+.btn-full-story {
+    background-color: var(--yellow);
+}
+
+
+.about-text > p:nth-child(1) {
+    padding-bottom: 1px;
+}
+
+.about-text svg.corner-top {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+}
+
+.about-text svg.corner-bottom {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+}
+
+/* About-short ends */
+
+
+/* Events start */
+
+.events {
+    background-color: var(--bage);
+}
+
+
+/* Upcoming events */
+
+.upcoming-events {
+    margin-top: 70px;
+    transform: translateY(-5%);
+    -webkit-transform: translateY(-5%);
+    -moz-transform: translateY(-5%);
+    -ms-transform: translateY(-5%);
+    -o-transform: translateY(-5%);
+}
+
+.upcoming-events h2 {
+    font-size: 1.944rem;
+    color: var(--darkbrown);
+    font-weight: 700;
+}
+
+.upper-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.filter-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    cursor: pointer;
+}
+
+.filter-nav > p {
+    color: var(--grey);
+    transition: 0.2s ease-in;
+    -webkit-transition: 0.2s ease-in;
+    -moz-transition: 0.2s ease-in;
+    -ms-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
+}
+
+.filter-nav > p:hover {
+    color: var(--yellow);
+}
+
+.event-card {
+    display: flex;
+    background-color: var(--white);
+    clip-path: polygon(0 0, 98% 2%, 100% 100%, 0 100%);
+    height: max-content;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.upcoming-events-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.event-content {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.date-place {
+    display: flex;
+    gap: 30px;
+}
+
+h5.filter-cat {
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--yellow);
+    padding-bottom: 25px;
+}
+
+h3.event-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--darkbrown);
+    padding-bottom: 20px;
+}
+
+.event-content > p {
+    color: var(--grey);
+    line-height: 1.722;
+    padding-bottom: 40px;
+}
+
+address.location {
+    font-style: normal;
+}
+
+address.location::before {
+    content: "";
+    display: flex;
+    background: url('../img/ic_address.svg') no-repeat;
+    float: left;
+    width: 27px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+p.date::before {
+    content: "";
+    display: flex;
+    background: url('../img/ic_time.svg') no-repeat;
+    float: left;
+    width: 27px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+
+.thumbnail {
+    position: relative;
+    display: flex;
+}
+
+h2.img-date {
+    font-size: 18px;
+    color: var(--white);
+    background-color: var(--yellow);
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.cardExpand {
+    display: none;
+}
+
+.btn-show-events {
+    border: 4px solid var(--terrakota);
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.btn-show-events:hover {
+    background-color: var(--yellow);
+    border: 4px solid var(--yellow);
+}
+
+.btn-show-events:hover  a {
+    color: var(--white);
+}
+
+.btn-show-events a {
+    color: var(--terrakota);
+}
+
+#cardExpand {
+    display: none;
+}
+
+/* Upcoming events section ends */
+/* Events section ends */
+
+/***************************************************************************************
+*    Title: <Simple Vanilla JS Filtering>
+*    Author: <Skandalis Vlassis>
+*    Date: <Unknown>
+*    Code version: <V1>
+*    Availability: <https://codepen.io/vskand/pen/MWKKKYK>
+*
+***************************************************************************************/
+
+.hide { 
+    animation: hide .5s ease 0s 1 normal forwards;
+    transform-origin: center;
+  }
+
+.show { 
+      animation: show .5s ease 0s 1 normal forwards;    
+      transform-origin: center;
+  }
+
+  @keyframes hide {
+    0%{
+      transform: scale(1);        
+    }
+    100% {
+      transform: scale(0);        
+      width: 0;
+      height: 0;
+      margin: 0;
+    }
+  }
+
+  @keyframes show {
+    0%{
+      transform: scale(0);     
+      width: 0;
+      height: 0;
+      margin: 0;   
+    }
+    100% {
+      transform: scale(1);    
+    }
+  }
+
+  /***************************************************************************************/
